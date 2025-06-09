@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Document" />
+    <meta name="description" content="Your Description..." />
+    <title>Esther Bwari</title>
+    <link
+      rel="stylesheet"
+      href="public/resources/swiper-js/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="public/resources/css/loader.css" />
+    <link rel="stylesheet" href="public/resources/css/hamburger.css" />
+    <link rel="stylesheet" href="public/resources/css/home.css" />
+    <link rel="stylesheet" href="public/resources/css/about.css" />
+    <link rel="stylesheet" href="public/resources/css/services.css" />
+    <link rel="stylesheet" href="public/resources/css/portfolio.css" />
+    <link rel="stylesheet" href="public/resources/css/comments.css" />
+    <link rel="stylesheet" href="public/resources/css/contact.css" />
+    <link href="public/resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="public/resources/css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="public/resources/img/favicon.icon.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body onload="loaded()">
+    <div class="loader">
+      <div class="c c1"></div>
+      <div class="c c2"></div>
+      <div class="c c3"></div>
+      <div class="c c4"></div>
+      <div class="c c5"></div>
+      <div class="c c6"></div>
+    </div>
+    <script>
+      let loader = document.querySelector(".loader");
+      function loaded() {
+        loader.classList.add("remove");
+        setTimeout(() => {
+          loader.style.display = "none";
+        }, 1000);
+      }
+    </script>
+    <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+    <div class="hamburger">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+
+    <!-- THE REAL NAVIGATION -->
+    <nav class="navigation">
+      <h1>
+        BWARI
+        <div></div>
+        <div></div>
+      </h1>
+      <ul>
+        <li><a href="#" onclick="home()">home</a></li>
+        <li>
+          <a href="#" onclick="about(); animate3.play(); animate4.play();"
+            >about</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="services(); animate6.play();">Why Me?</a>
+        </li>
+        <li><a href="#" onclick="portfolio()">projects</a></li>
+        <!-- <li><a href="#" onclick="comments()"></a></li> -->
+        <li>
+          <a href="#" onclick="contact(); animate5.play()">contact</a>
+        </li>
+      </ul>
+      <p>
+        &copy; 2024
+        <a
+          href="https://github.com/Bwari352"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Bwari</a
+        >.
+      </p>
+    </nav>
+
+    <div class="container">
+      <div class="layer layer1 active">
+        <div class="home main">
+          <div class="canvas_container">
+            <canvas></canvas>
+          </div>
+          <div class="content-for-home">
+            <div class="img-container" align="center">
+              <img
+                src="public/resources/img/giirl.jpg"
+                alt=""
+                style="width: 400px; height: 400px; border-radius: 50%"
+              />
+            </div>
+            <h1 align="center">Bwari Esther</h1>
+            <div class="social-icons">
+              <div class="s-icon">
+                <a
+                  href="https://www.instagram.com/esstaaaar?igsh=Y2w2d2tibG03Y3R4"
+                >
+                  <i class="fab fa-instagram"></i>
+                </a>
+                <div class="s-name">Instagram</div>
+              </div>
+              <div class="s-icon">
+                <a href="https://github.com/Bwari352">
+                  <i class="fab fa-github"></i>
+                </a>
+                <div class="s-name">GitHub</div>
+              </div>
+              <div class="s-icon">
+                <a href="https://www.linkedin.com/in/esther-bwari-797b73261/">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <div class="s-name">Linkedin</div>
+              </div>
+
+              <div class="s-icon">
+                <a href="mailto:email2.gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                <div class="s-name">Email</div>
+              </div>
+            </div>
+
+            <div class="side-nav">
+              <button onclick="about(); animate3.play(); animate4.play();">
+                <span class="w">W</span>
+                <span class="tooltip"> why me? </span>
+              </button>
+              <button onclick="services(); animate6.play();">
+                <span class="w">W</span>
+                <span class="tooltip"> what do I do? </span>
+              </button>
+              <button onclick="portfolio()">
+                <span class="w">W</span>
+                <span class="tooltip"> what have I done? </span>
+              </button>
+            </div>
+
+            <div class="titles-for-side-nav">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layer layer2">
+        <div class="about main">
+          <!-- SEGMENT FOR STYLING. -->
+          <div class="styling">
+            <div class="absolute box"></div>
+            <div class="absolute circle"></div>
+            <div class="absolute triangle"></div>
+            <div class="absolute dots">
+              <div class="dot dot1"></div>
+              <div class="dot dot2"></div>
+              <div class="dot dot3"></div>
+              <div class="dot dot4"></div>
+              <div class="dot dot5"></div>
+              <div class="dot dot6"></div>
+              <div class="dot dot7"></div>
+              <div class="dot dot8"></div>
+              <div class="dot dot9"></div>
+              <div class="dot dot10"></div>
+              <div class="dot dot11"></div>
+              <div class="dot dot12"></div>
+              <div class="dot dot13"></div>
+              <div class="dot dot14"></div>
+              <div class="dot dot15"></div>
+              <div class="dot dot16"></div>
+              <div class="dot dot17"></div>
+              <div class="dot dot18"></div>
+              <div class="dot dot19"></div>
+              <div class="dot dot20"></div>
+              <div class="dot dot21"></div>
+              <div class="dot dot22"></div>
+              <div class="dot dot23"></div>
+              <div class="dot dot24"></div>
+            </div>
+
+            <svg
+              class="wave absolute"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1450 320"
+            >
+              <path
+                fill-opacity="1"
+                d="M0,320L48,277.3C96,235,192,149,288,122.7C384,96,480,128,576,165.3C672,203,768,245,864,234.7C960,224,1056,160,1152,112C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+
+            <svg
+              class="wave absolute opposite"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1450 320"
+            >
+              <path
+                fill-opacity="1"
+                d="M0,224L48,213.3C96,203,192,181,288,192C384,203,480,245,576,218.7C672,192,768,96,864,64C960,32,1056,64,1152,101.3C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+
+          <!-- REAL CONTENT -->
+          <div class="wrapper">
+            <div class="face face1">
+              <div class="content">
+                <p>Hello,</p>
+                <h1>I'm Bwari</h1>
+                <p class="text">
+                  A Web Developer,Presentation Designer,aspiring Cloud
+                  Practioner and I'm very passionate and dedicated to my line of
+                  career. I have acquired the skills and knowledge necessary to
+                  make your project a success I enjoy every step of the design
+                  process, from discussion and collaboration.
+                </p>
+                <a
+                  class="button download"
+                  href="/resources/img/bg1.png"
+                  download=""
+                  >Download CV</a
+                >
+                <a
+                  class="button hire"
+                  href="#"
+                  class="hire"
+                  onclick="contact(); animate5.play()"
+                  >Hire Me.</a
+                >
+              </div>
+            </div>
+            <div class="face face2"></div>
+          </div>
+
+          <!-- THE NAVIGATION OF ABOUT -->
+          <nav class="about_nav">
+            <ul>
+              <li>
+                <a class="active" href="#" data-text="one">Skills</a>
+              </li>
+              <li>
+                <a href="#" data-text="two">Experience</a>
+              </li>
+              <li>
+                <a href="#" data-text="three">Education</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="about_container">
+            <!-- SKILL BOX -->
+            <div class="skills">
+              <div class="skill">
+                <div class="name">HTML5</div>
+                <div class="value" style="left: 90%">90%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="name">CSS3</div>
+                <div class="value" style="left: 75%">75%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="name">JavaScript</div>
+                <div class="value" style="left: 65%">60%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 65%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="name">PHP</div>
+                <div class="value" style="left: 50%">50%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 50%"></div>
+                </div>
+              </div>
+
+              <div class="skill">
+                <div class="name">C++</div>
+                <div class="value" style="left: 55%">55%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 55%"></div>
+                </div>
+              </div>
+              <div class="skill">
+                <div class="name">Python</div>
+                <div class="value" style="left: 55%">80%</div>
+                <div class="percent">
+                  <div class="progress" style="width: 55%"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="experience">
+              <div class="middle_line"></div>
+              <div class="cover">
+                <i class="job_box fas fa-briefcase"></i>
+                <i class="date">May 2023 - Present</i>
+                <h2>Class Representative</h2>
+                <i class="name_company">KCA University</i>
+                <article class="text_hidden">
+                  Acted as a liaison between students and faculty, coordinated
+                  events and activities, represented student interests, mediated
+                  conflicts, and assisted in organizing academic activities.
+                </article>
+              </div>
+
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+              <div class="cover">
+                <i class="job_box fas fa-briefcase"></i>
+                <i class="date">Oct 2024</i>
+                <h2>Presentation Designer(PowerPoint)</h2>
+                <i class="name_company">Harbauer Kenya | Nakuru Kenya </i>
+                <article class="text_hidden">
+                  Involved conceptualizing, designing, writing content,
+                  executing technically, reviewing, testing, and presenting a
+                  dynamic book animation\\ in PowerPoint.
+                </article>
+              </div>
+
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+            </div>
+            <div class="education">
+              <div class="middle_line"></div>
+              <div class="cover">
+                <i class="job_box fas fa-book-reader"></i>
+                <i class="date">2023 - 2026</i>
+                <h2>Bachelor of Science in ICT</h2>
+                <i class="name_company">KCA University</i>
+                <article class="text_hidden">
+                  Key Modules: Web Development, Computer Networks, Database
+                  Systems, Software Engineering & Information Security
+                </article>
+              </div>
+
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+              <div class="cover">
+                <i class="job_box fas fa-briefcase"></i>
+                <i class="date">May 2025 - August 2025</i>
+                <h2>AWS/reSTART Program</h2>
+                <i class="name_company">AWS </i>
+                <article class="text_hidden">
+                  Key modules: Cloud fundamentals, Linux, networking, security,
+                  Python programming, databases, core AWS services, and
+                  essential professional skills, all geared towards preparing
+                  participants for entry-level cloud careers and the AWS
+                  Certified Cloud Practitioner exam.
+                </article>
+              </div>
+
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+              <div class="cover">
+                <i class="job_box fas fa-book-reader"></i>
+                <i class="date">Oct 2024 - December 2024</i>
+                <h2>Web Development</h2>
+                <i class="name_company">eMobilis Institute</i>
+                <article class="text_hidden">
+                  Key Modules: Introduction to Web Development (HTML, CSS),
+                  Responsive Web Design, Front-End Development (JavaScript),
+                  Back-End Development (Django), Database Management (MySQL,
+                  DbSQlite3), Version Control (Git, GitHub), Web Accessibility,
+                  User Experience (UX) Design, Web Security, and Project
+                  Management.
+                </article>
+              </div>
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+              <div class="cover">
+                <i class="job_box fas fa-book-open"></i>
+                <i class="date">Sep 2023 - Dec 2023</i>
+                <h2>CCNA 1</h2>
+                <i class="name_company">Jomo Kenyatta Univesity, Nakuru</i>
+                <article class="text_hidden">
+                  Key Modules: Networking Fundamentals, IP Connectivity,
+                  Security Fundamentals, Automation and Programmability, and
+                  Network Operations.
+                </article>
+              </div>
+              <div class="whitespace"></div>
+              <div class="whitespace"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layer layer3">
+        <div class="services main">
+          <!-- <section class="background">
+            <div class="bg_wrapper"></div>
+          </section> -->
+          <div class="hero">
+            <span class="typography">
+              <span class="t_dummy">I know how to</span> <br />
+              <span class="t-box">
+                <span class="box-side box-front">take risk</span>
+                <span class="box-side box-top">take a side</span>
+                <span class="box-side box-back">be different</span>
+                <span class="box-side box-bottom">be innovative</span>
+              </span>
+            </span>
+          </div>
+          <div class="capabilities left move-little-down">
+            <img src="/resources/img/elements/web_bg.png" alt="" />
+          </div>
+          <div class="capabilities right">
+            <img src="/resources/img/elements/graphics_bg.png" alt="" />
+          </div>
+          <div class="capabilities left">
+            <img
+              src="/resources/img/elements/seo_bg.png"
+              alt=""
+              style="
+                background: #2929292f;
+                backdrop-filter: blur(4px);
+                border-radius: 40px;
+              "
+            />
+          </div>
+          <div class="foot">
+            <!-- <h2>Works:</h2> -->
+            <div class="foot-link">
+              <a href="#" onclick="portfolio()">My Projects</a>
+              <i class="far fa-arrow-alt-circle-right"></i>
+              <img
+                src="public/resources/img/portfolios/app/2.jpg"
+                alt="portfolio"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layer layer4">
+        <div class="portfolio main">
+          <div class="tip main">
+            <div class="allContent">
+              <div class="description" style="display: none">
+                <div class="pro_intro">
+                  <div class="nameplate">
+                    <h1>Wedding Couple</h1>
+                    <span
+                      >Category:
+                      <span style="color: #999">Web Design</span></span
+                    >
+                  </div>
+                  <div class="other_text">
+                    <h2>Project Brief:</h2>
+                    <p
+                      class="pro_brief"
+                      style="color: #999; padding-left: 15px"
+                    >
+                      A static website more of commerce showcasing the products
+                      outof sorghum farming that is being practised
+                    </p>
+                  </div>
+                </div>
+                <div class="pro_info">
+                  <h2>Project Info</h2>
+                  <p class="Date">
+                    <b>Date: </b>
+                    <span style="color: #999">2024</span>
+                  </p>
+                  <p class="client">
+                    <b>Client: </b>
+                    <span style="color: #999">personal</span>
+                  </p>
+                  <p>
+                    <b>Tools: </b>
+                    <span style="color: #999">HTML, CSS, JavaScript</span>
+                  </p>
+                  <p class="link">
+                    <b>Web: </b>
+                    <span style="color: #999"
+                      ><a href="#">www.domain.com</a></span
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <button class="closeButton">
+                <span>Project Details</span>
+                <div class="icon"></div>
+              </button>
+              <button class="exitButton">&times;</button>
+
+              <div class="port_content">
+                <div class="swiper-container-2">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="#" alt="web design" />
+                    </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-scrollbar"></div>
+                  <!-- Add Arrows -->
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <nav class="about_nav padding_top">
+            <ul>
+              <li>
+                <a class="filter active" href="#" data-filter="all">All</a>
+              </li>
+              <li>
+                <a class="filter" href="#" data-filter=".web">Web Design</a>
+              </li>
+              <li>
+                <a class="filter" href="#" data-filter=".logo"
+                  >Logo/ Graphic Design</a
+                >
+              </li>
+              <li>
+                <a class="filter" href="#" data-filter=".card"
+                  >Presentation Design</a
+                >
+              </li>
+              <li>
+                <!-- <a class="filter" href="#" data-filter=".app">Presentation Design</a> -->
+              </li>
+              <li>
+                <!-- <a class="filter" href="#" data-filter=".icon">Icons</a> -->
+              </li>
+            </ul>
+          </nav>
+          <div class="mymixcont">
+            <div class="mix web">
+              <img src="public/resources/img/portfolios/sorghum1.png" alt="" />
+              <span class="title">Sstar Website</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+
+            <div class="mix card">
+              <img
+                src="public/resources/img/portfolios/presentation 1.png"
+                alt=""
+              />
+              <span class="title">Personal Practise</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+            <div class="mix web">
+              <img src="public/resources/img/portfolios/Insurance.png" alt="" />
+              <span class="title">Insurance System</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+
+            <div class="mix card">
+              <img src="public/resources/img/portfolios/harbeur1.png" alt="" />
+              <span class="title">Harbauer Kenya | Sofia Muthoni</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+
+            <div class="mix logo">
+              <img
+                src="public/resources/img/portfolios/Kids book fair (1).jpg"
+                alt=""
+              />
+              <span class="title">Kids Launch Event Poster</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+
+            <div class="mix logo">
+              <img src="public/resources/img/portfolios/mothers'.png" alt="" />
+              <span class="title">Mother's Day Poster</span>
+              <!-- <span class="port_link">View Project</span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="layer layer5">
+        <div class="testimonial">
+          <h1>
+            <span>See What My Clients Say about Me.</span>
+          </h1>
+          <div class="swiper-container">
+            <div class="swiper-wrapper"></div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+      <div class="layer layer6">
+        <div class="contact_us">
+          <div id="map"></div>
+          <address class="info_container">
+            <div class="info info1">
+              <i class="fas fa-phone-alt"></i>
+              <span class="iname">Phone</span>
+              <a href="tel:+254748903510">+254748903510</a>
+              <a href="tel:+254759092992">+254759092992</a>
+            </div>
+
+            <div class="info info3">
+              <i class="fas fa-envelope"></i>
+              <span class="iname">Email</span>
+              <a href="mailto:email1.gmail.com">bwariesther63@gmail.com</a>
+              <a href="mailto:email2.gmail.com">esthernyabonyi352@gmail.com</a>
+            </div>
+          </address>
+
+          <form action="#" method="post">
+            <h1>Get In Touch</h1>
+            <div class="inp_field">
+              <i class="fas fa-user"></i>
+              <input
+                type="text"
+                name="name"
+                class="fname"
+                id="fname"
+                placeholder="Full Name"
+                required
+              />
+            </div>
+            <div class="inp_field">
+              <i class="fas fa-envelope"></i>
+              <input
+                type="email"
+                name="email"
+                class="email"
+                id="email"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="inp_field">
+              <i class="fas fa-angle-double-right"></i>
+              <input
+                type="text"
+                name="subject"
+                class="subject"
+                id="subject"
+                placeholder="Subject"
+                required
+              />
+            </div>
+            <textarea
+              name="message"
+              cols="30"
+              rows="5"
+              class="message"
+              id="message"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button class="submit" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+    <script src="public/resources/js/jquery.min.js"></script>
+    <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+    <script src="public/resources/js/mixitup.min.js"></script>
+    <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, comments.js]----------------->
+    <script src="public/resources/swiper-js/swiper-bundle.min.js"></script>
+    <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+    <script src="public/resources/mapbox-gl/mapbox-gl.js"></script>
+    <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+    <script src="public/resources/js/email.min.js"></script>
+    <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+    <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+    <script src="public/resources/js/vanilla-tilt.min.js"></script>
+    <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+    <script src="public/resources/js/anime.min.js"></script>
+    <!-----------------LOCAL (HOME)----------------->
+    <script src="public/resources/js/home.js"></script>
+    <!-----------------LOCAL (ABOUT)----------------->
+    <script src="public/resources/js/about.js"></script>
+    <!-----------------LOCAL (SERVICES)----------------->
+    <script src="public/resources/js/services.js"></script>
+    <!-----------------LOCAL (PORTFOLIO)----------------->
+    <script src="public/resources/js/portfolio.js"></script>
+    <!-----------------LOCAL (COMMENTS)----------------->
+    <script src="public/resources/js/comments.js"></script>
+    <!-----------------LOCAL (MAIN FILE)----------------->
+    <script src="public/resources/js/main.js"></script>
+
+    <!-----------------CONTACT LOGIC-------------------------->
+    <script type="module">
+      // The 'building' layer in the mapbox-streets vector source contains building-height
+      // data from OpenStreetMap.
+      // For more, goto:
+      // https://www.mapbox.com/install/
+
+      mapboxgl.accessToken = import.meta.env.VITE_MAPBOX_ACCESS_TOKEN || "";
+      var map = new mapboxgl.Map({
+        style: "mapbox://styles/mapbox/light-v10",
+        center: [90.3911645, 23.7494284], // Longitude, latitude
+        zoom: 18.5, // Zoom level
+        pitch: 45,
+        bearing: -17.6,
+        container: "map", // Our #map target.
+        antialias: true,
+      });
+
+      map.on("load", function () {
+        // Insert the layer beneath any symbol layer.
+        var layers = map.getStyle().layers;
+
+        var labelLayerId;
+        for (var i = 0; i < layers.length; i++) {
+          if (layers[i].type === "symbol" && layers[i].layout["text-field"]) {
+            labelLayerId = layers[i].id;
+            break;
+          }
+        }
+
+        map.addLayer(
+          {
+            id: "3d-buildings",
+            source: "composite",
+            "source-layer": "building",
+            filter: ["==", "extrude", "true"],
+            type: "fill-extrusion",
+            minzoom: 15,
+            paint: {
+              "fill-extrusion-color": "#aaa",
+
+              // use an 'interpolate' expression to add a smooth transition effect to the
+              // buildings as the user zooms in
+              "fill-extrusion-height": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                0,
+                15.05,
+                ["get", "height"],
+              ],
+              "fill-extrusion-base": [
+                "interpolate",
+                ["linear"],
+                ["zoom"],
+                15,
+                0,
+                15.05,
+                ["get", "min_height"],
+              ],
+              "fill-extrusion-opacity": 0.6,
+            },
+          },
+          labelLayerId
+        );
+      });
+      function vanillaTilt(element) {
+        VanillaTilt.init(document.querySelector(element), {
+          max: 10,
+          speed: 200,
+          glare: true,
+          "max-glare": 0.5,
+        });
+      }
+
+      vanillaTilt(".info1");
+      vanillaTilt(".info2");
+      vanillaTilt(".info3");
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+      });
+      let form_name = document.getElementById("fname");
+      let email = document.getElementById("email");
+      let subject = document.getElementById("subject");
+      let message = document.getElementById("message");
+      let submit = document.getElementById("submit");
+
+      submit.addEventListener("click", () => {
+        if (
+          form_name.value == "" &&
+          email.value == "" &&
+          subject.value == "" &&
+          message.value == ""
+        ) {
+          alert("All fields are required");
+          return;
+        } else {
+          submitEmail();
+        }
+      });
+
+      emailjs.init(import.meta.env.VITE_EMAILJS_ACCESS_TOKEN);
+
+      function submitEmail() {
+        let param = {
+          method: "POST",
+          from_name: form_name.value,
+          from_email: email.value,
+          to_name: "Shuvro!",
+          subject: subject.value,
+          message: message.value,
+        };
+
+        emailjs.send("service_name", "template_name", param).then(
+          function (response) {
+            alert("SUCCESS! " + response.status + " " + response.text);
+          },
+          function (error) {
+            alert("FAILED... " + error);
+          }
+        );
+      }
+
+      document.querySelector("form").addEventListener("submit", (e) => {
+        e.preventDefault();
+      });
+    </script>
+
+    <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+    <script defer>
+      const animate1 = anime.timeline({
+        targets: ".circle",
+        loop: true,
+        duration: 2000,
+        direction: "alternate",
+        easing: "easeInOutQuad",
+      });
+      animate1.add({
+        translateX: 350,
+      });
+
+      let dot = document.querySelectorAll(".dot");
+      for (let i = 0; i < dot.length; i++) {
+        const ind = dot[i];
+        const animate2 = anime.timeline({
+          targets: ind,
+          loop: true,
+          direction: "alternate",
+          delay: i * 100,
+        });
+        animate2.add({
+          scale: 2,
+        });
+      }
+
+      let span = document.querySelectorAll(".content .text span");
+      const animate3 = anime.timeline({
+        targets: span,
+        easing: "easeInOutExpo",
+        delay: anime.stagger(20, { direction: "reverse" }),
+        direction: "reverse",
+        autoplay: false,
+      });
+
+      animate3.add({
+        rotate: () => {
+          return anime.random(-360, 360);
+        },
+        translateX: () => {
+          return anime.random(-500, 500);
+        },
+        translateY: () => {
+          return anime.random(-500, 500);
+        },
+        duration: 3000,
+      });
+
+      const animate4 = anime({
+        targets: ".button",
+        scale: [0, 1],
+        delay: anime.stagger(200, { start: 7000 }),
+        autoplay: false,
+      });
+
+      const animate5 = anime({
+        targets: [
+          document.querySelectorAll(".info"),
+          document.querySelectorAll(".inp_field"),
+          ".message",
+          ".submit",
+        ],
+        translateY: [50, 0],
+        rotateX: [90, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(300, { start: 1000 }),
+        duration: 750,
+        autoplay: false,
+        easing: "easeOutQuint",
+      });
+
+      const animate6 = anime({
+        targets: [".services .t_dummy", ".services .hero-text"],
+        duration: 1000,
+        scaleX: [0, 1],
+        delay: anime.stagger(300, { start: 1000 }),
+        autoplay: false,
+      });
+
+      function resize() {
+        if (window.innerWidth <= 632) {
+          animate5.play();
+          animate3.play();
+          animate4.play();
+          animate6.play();
+        }
+      }
+      resize();
+      window.addEventListener("resize", resize);
+    </script>
+  </body>
+</html>
