@@ -47,6 +47,11 @@ jobs:
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
+              - name: Debug GitHub Pages Settings
+  run: |
+    echo "Current repository: ${{ github.repository }}"
+    echo "Pages URL: ${{ steps.deployment.outputs.page_url }}"
+    echo "Branch: ${{ github.ref }}"
                   # Upload dist folder
                   path: "./dist"
             - name: Deploy to GitHub Pages
